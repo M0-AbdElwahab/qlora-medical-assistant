@@ -133,6 +133,14 @@ logs/             training config and loss log
 assets/           demo screenshots
 ```
 
-## Data source and license note
+## Data source and license
 
-Questions and answers come from MedQuAD (NIH web pages) via the Hugging Face copy above. Check the dataset's own page for its license and terms before reusing it.
+Data: MedQuAD, from "A Question-Entailment Approach to Question Answering", Asma Ben Abacha and Dina Demner-Fushman, BMC Bioinformatics, 2019. The original repository is https://github.com/abachaa/MedQuAD and it is published under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The answers originate from NIH websites.
+
+I used the Hugging Face copy `keivalya/MedQuad-MedicalQnADataset`, which declares no license itself. The terms above come from the original repository.
+
+**Changes made:** whitespace cleaned and doubled question marks fixed, duplicate questions and answers removed, answers filtered to 50 to 1,500 characters, subsampled to 2,500 training and 200 held-out examples, and reformatted into a chat format.
+
+This project is not endorsed by the MedQuAD authors or the NIH. The original authors removed the answers of three MedlinePlus subsets for copyright reasons. I have not verified which subsets the Hugging Face copy contains.
+
+Base model: [Qwen/Qwen2.5-1.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct), licensed under Apache 2.0 (Copyright 2024 Alibaba Cloud). The adapter in this project is a modification and is not endorsed by Qwen or Alibaba Cloud.
