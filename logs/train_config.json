@@ -1,0 +1,28 @@
+
+{
+  "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "n_train": 2500,
+  "seed": 42,
+  "max_length": 512,
+  "epochs": 1,
+  "batch_size": 4,
+  "grad_accum": 4,
+  "learning_rate": 0.0002,
+  "warmup_steps": 10,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "lora_targets": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "trainable_params": 18464768,
+  "total_params": 907081216,
+  "train_minutes": 13.29,
+  "peak_gpu_gb": 2.71
+}
