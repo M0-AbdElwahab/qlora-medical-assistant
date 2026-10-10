@@ -1,0 +1,22 @@
+{
+  "base": {
+    "loss": 1.7426,
+    "perplexity": 5.712,
+    "rougeL_mean": 0.1843,
+    "mean_generated_words": 139.5,
+    "answers_hitting_token_cap_approx": 44
+  },
+  "finetuned": {
+    "loss": 1.2353,
+    "perplexity": 3.439,
+    "rougeL_mean": 0.2719,
+    "mean_generated_words": 114.5,
+    "answers_hitting_token_cap_approx": 54
+  },
+  "reference_mean_words": 102.0,
+  "finetuned_beats_base_rougeL_count": 123,
+  "n_eval": 200,
+  "max_new_tokens": 300,
+  "adapter_repo": "M0-AbdElwahab27/qwen2.5-1.5b-medqa-qlora",
+  "eval_minutes": 21.23
+}

@@ -1,0 +1,48 @@
+{
+  "rows_loaded": 16407,
+  "rows_after_cleaning": 16407,
+  "rows_after_question_dedupe": 14345,
+  "rows_after_answer_dedupe": 13813,
+  "rows_after_length_filter": 9719,
+  "final_train": 2500,
+  "final_eval": 200,
+  "constants": {
+    "SEED": 42,
+    "N_EVAL": 200,
+    "N_TRAIN": 2500,
+    "MIN_ANSWER_CHARS": 50,
+    "MAX_ANSWER_CHARS": 1500
+  },
+  "qtype_counts_train": {
+    "causes": 148,
+    "information": 670,
+    "treatment": 447,
+    "frequency": 262,
+    "symptoms": 212,
+    "genetic changes": 184,
+    "outlook": 90,
+    "inheritance": 213,
+    "research": 68,
+    "considerations": 23,
+    "prevention": 31,
+    "exams and tests": 102,
+    "susceptibility": 43,
+    "complications": 6,
+    "stages": 1
+  },
+  "qtype_counts_eval": {
+    "treatment": 43,
+    "inheritance": 12,
+    "information": 62,
+    "outlook": 6,
+    "research": 6,
+    "genetic changes": 12,
+    "prevention": 2,
+    "frequency": 25,
+    "causes": 10,
+    "symptoms": 13,
+    "susceptibility": 2,
+    "exams and tests": 6,
+    "stages": 1
+  }
+}
