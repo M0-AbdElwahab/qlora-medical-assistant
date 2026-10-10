@@ -111,6 +111,12 @@ def main():
     trainable, total = count_params(trainer.model)
     print(f"trainable params: {trainable:,} of {total:,} ({100 * trainable / total:.3f}%)")
 
+    # LoRA weights must be fp32 when training with fp16: the gradient scaler cannot handle bf16 grads
+    for p in trainer.model.parameters():
+        if p.requires_grad and p.dtype != torch.float32:
+            p.data = p.data.float()
+    print("trainable dtypes:", {str(p.dtype) for p in trainer.model.parameters() if p.requires_grad})
+
     start = time.time()
     trainer.train()
     minutes = (time.time() - start) / 60
